@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZenCubix | Your Personal Silent Study Space</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#6e0a12",
+                        "on-surface-variant": "#596064",
+                        "surface-container-highest": "#dce4e8",
+                        "primary-container": "#429efd",
+                        "outline": "#747c80",
+                        "tertiary": "#53616a",
+                        "on-surface": "#2c3437",
+                        "outline-variant": "#acb3b7",
+                        "inverse-on-surface": "#9a9d9f",
+                        "on-tertiary-fixed": "#3a4851",
+                        "on-background": "#2c3437",
+                        "secondary-dim": "#34576f",
+                        "inverse-surface": "#0b0f10",
+                        "surface-container-high": "#e3e9ed",
+                        "on-error": "#fff7f6",
+                        "secondary-container": "#c9e6ff",
+                        "secondary": "#41637b",
+                        "error-dim": "#67040d",
+                        "surface-container-low": "#f0f4f7",
+                        "on-tertiary": "#f4faff",
+                        "tertiary-fixed": "#e1f0fb",
+                        "on-primary-container": "#001e3b",
+                        "on-tertiary-fixed-variant": "#56656e",
+                        "surface-tint": "#0061aa",
+                        "tertiary-fixed-dim": "#d3e2ed",
+                        "primary-fixed-dim": "#2f91ef",
+                        "on-secondary": "#f5f9ff",
+                        "primary-fixed": "#429efd",
+                        "surface": "#f8f9fb",
+                        "error-container": "#fa746f",
+                        "secondary-fixed": "#c9e6ff",
+                        "inverse-primary": "#429efd",
+                        "secondary-fixed-dim": "#b6d9f6",
+                        "error": "#a83836",
+                        "tertiary-dim": "#47555e",
+                        "surface-dim": "#d4dbdf",
+                        "on-tertiary-container": "#4c5a63",
+                        "tertiary-container": "#e1f0fb",
+                        "on-primary-fixed": "#000000",
+                        "primary-dim": "#005595",
+                        "surface-container": "#eaeff2",
+                        "primary": "#0061aa",
+                        "on-secondary-container": "#33556d",
+                        "on-secondary-fixed-variant": "#3d5f78",
+                        "on-primary": "#f8f8ff",
+                        "surface-bright": "#f8f9fb",
+                        "background": "#f8f9fb",
+                        "on-primary-fixed-variant": "#00284b",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#dce4e8",
+                        "on-secondary-fixed": "#1f435a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #0061aa 0%, #429efd 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-slate-900">ZenCubix</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-manrope text-sm font-medium tracking-tight text-slate-600 hover:text-blue-500 transition-colors duration-200" href="#features">Features</a>
+<a class="font-manrope text-sm font-medium tracking-tight text-slate-600 hover:text-blue-500 transition-colors duration-200" href="#benefits">Benefits</a>
+<a class="font-manrope text-sm font-medium tracking-tight text-slate-600 hover:text-blue-500 transition-colors duration-200" href="#how-it-works">How it Works</a>
+<a class="font-manrope text-sm font-medium tracking-tight text-slate-600 hover:text-blue-500 transition-colors duration-200" href="#pricing">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="primary-gradient text-on-primary px-6 py-2.5 rounded-full font-medium text-sm hover:scale-105 transition-transform duration-300">Pre-order</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 text-left space-y-6">
+<h1 class="text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
+                    Your Personal <span class="text-primary">Silent</span> Study Space Anywhere.
+                </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                    Turn any corner into a distraction-free zone with ZenCubix. The portable acoustic booth designed for the modern focus seeker.
+                </p>
+<div class="flex gap-4 pt-4">
+<button class="primary-gradient text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-primary/20">Pre-order Now</button>
+<button class="bg-surface-container-high text-on-secondary-container px-8 py-4 rounded-full font-bold text-lg hover:bg-surface-container-highest transition-colors">Learn More</button>
+</div>
+</div>
+<div class="flex-1 w-full relative">
+<div class="bg-surface-container-low rounded-xl overflow-hidden aspect-square md:aspect-[4/5] relative">
+<img alt="Student focused inside booth" class="w-full h-full object-cover" data-alt="Young student sitting inside a minimalist white acoustic cubicle in a modern living room, soft natural morning light coming from a window." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEi3vvNHQN2DNWwsM8NgO6pTvGLa9fotgxz2nulVxqHx70cXcZjPYs5IbHrJt39aBo6hOOkIxInTfOHB_q02UAEY4IHhS6yl4k6ED4Rlh7-naJNxeNrVXNUxLmWNOUyvsmEG3VIgKc6NRz0J_KuTW5XnaHAD11CTqpbT8vuBp_Rt9cNGi-I_XIFIAx0u1S31WqJcHmVJONK2TSEagWaNz2k-7PddrmlkaW5NE8BozBUTpPHpWkk8MizTtPo0NMuy48-vh3hITIc08"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+</div>
+<!-- Glass Card Float -->
+<div class="absolute -bottom-6 -left-6 glass-nav p-6 rounded-xl border border-white/20 shadow-2xl hidden md:block">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified">verified</span>
+<div>
+<p class="font-bold text-on-surface">30dB Reduction</p>
+<p class="text-xs text-on-surface-variant">Lab certified acoustic foam</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem Section (Bento Style) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-3xl md:text-5xl font-bold tracking-tight">The Modern Struggle</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Concentrating in today's world is a constant battle against the environment.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-10 rounded-xl space-y-6">
+<div class="w-16 h-16 rounded-2xl bg-error-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-4xl" data-icon="volume_off">volume_off</span>
+</div>
+<h3 class="text-2xl font-bold">Unending Noise</h3>
+<p class="text-on-surface-variant leading-relaxed">Chatter, traffic, and construction. Your home is rarely as quiet as you need it to be for deep work.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl space-y-6">
+<div class="w-16 h-16 rounded-2xl bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="visibility_off">visibility_off</span>
+</div>
+<h3 class="text-2xl font-bold">Zero Privacy</h3>
+<p class="text-on-surface-variant leading-relaxed">Shared spaces mean constant visual distractions. Finding a truly private corner is nearly impossible.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl space-y-6">
+<div class="w-16 h-16 rounded-2xl bg-tertiary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="trending_down">trending_down</span>
+</div>
+<h3 class="text-2xl font-bold">Low Productivity</h3>
+<p class="text-on-surface-variant leading-relaxed">It takes 23 minutes to refocus after a distraction. Without isolation, your output remains at a fraction of its potential.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Solution Section -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-16">
+<div class="flex-1 space-y-8">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Meet ZenCubix</span>
+<h2 class="text-4xl md:text-5xl font-bold leading-tight">The Portable Foldable Acoustic Sanctuary</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                    ZenCubix isn't just a desk accessory, it's a portable environment. Crafted from premium sound-absorbing fibers, it creates a visual and acoustic barrier that signals to your brain: <span class="text-on-surface font-semibold">"It's time to focus."</span>
+</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span>Folds flat in 10 seconds</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span>Weighs less than 3 kilograms</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span>Fits any standard study desk</span>
+</li>
+</ul>
+</div>
+<div class="flex-1">
+<div class="bg-surface-container-highest rounded-xl p-4">
+<img alt="Product design detail" class="rounded-xl shadow-inner w-full h-[500px] object-cover" data-alt="Close up view of high-quality grey acoustic felt material with clean geometric folds and a warm integrated LED light glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoWm7yfHDrIskLThGtziV1qhtn9r7B6QLHLDiNI3xXIAMEFyYLTNNssrpY-tzsCMlzwHsPVuifq2mjms0WhlThhdESd2zSNJjTBmtNVhxOagUxPxK626_EuYrIX1L46Yv3QrimsZPySg_lQKgnz8EdbODNin07XFQEEc-M-lzUPIwPhJ_7GzlipVo9jZ9-HRn3pZQ57WQ8v_HvlkLFpytrQ-jbR_EUUeAvcbDomG8fY1vlw2nkTjct2ui5jPKQLG3g0z-ZYZa-mxM"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-24 bg-surface" id="features">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-bold tracking-tight">Engineered for Flow</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+<!-- Large Feature -->
+<div class="md:col-span-3 bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between h-[400px]">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-4" data-icon="handyman">handyman</span>
+<h3 class="text-3xl font-bold mb-4">Foldable &amp; Portable</h3>
+<p class="text-on-surface-variant max-w-sm">From your bedroom to the library or the office. Take your concentration zone wherever you go.</p>
+</div>
+<div class="flex gap-2">
+<div class="h-12 w-24 bg-surface-container-high rounded-full"></div>
+<div class="h-12 w-12 bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- Small Features -->
+<div class="md:col-span-2 bg-primary-container text-on-primary-container p-8 rounded-xl flex flex-col justify-center gap-4">
+<span class="material-symbols-outlined text-4xl" data-icon="noise_control_off">noise_control_off</span>
+<h3 class="text-2xl font-bold">Noise Reduction</h3>
+<p class="opacity-90">High-density composite layers block out 60% of ambient mid-frequency sounds.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl space-y-4">
+<span class="material-symbols-outlined text-4xl text-on-surface" data-icon="lightbulb">lightbulb</span>
+<h3 class="text-xl font-bold">Built-in LED</h3>
+<p class="text-sm text-on-surface-variant">Adjustable 4000K daylight LED strip reduces eye strain during late-night sessions.</p>
+</div>
+<div class="md:col-span-1 bg-surface-container-lowest p-8 rounded-xl flex flex-col items-center text-center justify-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="air">air</span>
+<h3 class="text-lg font-bold">Ventilation</h3>
+<p class="text-xs text-on-surface-variant">Passive airflow design keeps you cool.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container-highest p-8 rounded-xl flex flex-col justify-center gap-4">
+<span class="material-symbols-outlined text-4xl text-on-surface" data-icon="aspect_ratio">aspect_ratio</span>
+<h3 class="text-xl font-bold">Compact Design</h3>
+<p class="text-on-surface-variant">Sized perfectly to provide room for your laptop, notebook, and a coffee mug.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-24 bg-surface-container-low" id="how-it-works">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-3xl md:text-5xl font-bold text-center mb-20 tracking-tight">Focus in Seconds</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Connector Line (Desktop) -->
+<div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-px bg-outline-variant/30"></div>
+<div class="text-center space-y-4 relative z-10">
+<div class="w-20 h-20 bg-surface-container-lowest rounded-full flex items-center justify-center mx-auto shadow-sm">
+<span class="text-2xl font-bold text-primary">01</span>
+</div>
+<h3 class="text-xl font-bold">Unfold</h3>
+<p class="text-on-surface-variant">Expand the magnetic panels to reveal your private space.</p>
+</div>
+<div class="text-center space-y-4 relative z-10">
+<div class="w-20 h-20 bg-surface-container-lowest rounded-full flex items-center justify-center mx-auto shadow-sm">
+<span class="text-2xl font-bold text-primary">02</span>
+</div>
+<h3 class="text-xl font-bold">Set up</h3>
+<p class="text-on-surface-variant">Place on any table. Plug in the USB for the built-in light.</p>
+</div>
+<div class="text-center space-y-4 relative z-10">
+<div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center mx-auto shadow-sm">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="bolt">bolt</span>
+</div>
+<h3 class="text-xl font-bold">Start focusing</h3>
+<p class="text-on-surface-variant">Slide your chair in and say goodbye to distractions.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row gap-12 items-end mb-16">
+<div class="flex-1">
+<h2 class="text-4xl font-bold tracking-tight mb-4">Loved by Deep-Workers</h2>
+<p class="text-on-surface-variant">Join 500+ early adopters who transformed their productivity.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-low p-10 rounded-xl space-y-6">
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="text-xl italic text-on-surface leading-relaxed">"ZenCubix is a game changer for me. Living in a small hostel room, finding a place to focus was impossible until I got this."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-300"></div>
+<div>
+<p class="font-bold">Rahul Verma</p>
+<p class="text-sm text-on-surface-variant">UPSC Aspirant</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 rounded-xl space-y-6">
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="text-xl italic text-on-surface leading-relaxed">"The acoustic foam actually works. I can work in a coffee shop now without needing noise-canceling headphones for 8 hours straight."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-400"></div>
+<div>
+<p class="font-bold">Ananya S.</p>
+<p class="text-sm text-on-surface-variant">Freelance Designer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 bg-surface" id="pricing">
+<div class="max-w-4xl mx-auto px-8">
+<div class="bg-surface-container-lowest rounded-xl p-1 md:p-2 border border-outline-variant/10 shadow-2xl">
+<div class="bg-primary text-white rounded-xl p-12 text-center space-y-8">
+<h2 class="text-4xl font-bold">Invest in Your Focus</h2>
+<div class="flex items-baseline justify-center gap-2">
+<span class="text-5xl md:text-7xl font-extrabold">Rs. 8,000</span>
+<span class="text-xl opacity-80">per unit</span>
+</div>
+<p class="text-lg max-w-md mx-auto opacity-90">
+                        Student-friendly pricing. One-time investment for years of distraction-free productivity.
+                    </p>
+<div class="pt-6">
+<button class="bg-white text-primary px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform">Pre-order Now</button>
+</div>
+<p class="text-sm opacity-70">Estimated delivery: October 2024</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-8 text-center space-y-8">
+<h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Ready for a quieter world?</h2>
+<p class="text-on-surface-variant text-lg">Limited stock available for the first production run.</p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<button class="primary-gradient text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform">Pre-order Now</button>
+<button class="bg-surface-container-high text-on-surface px-10 py-4 rounded-full font-bold text-lg hover:bg-surface-container-highest transition-colors">Contact Us</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 bg-slate-50">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="font-manrope font-bold text-slate-900 text-2xl">ZenCubix</div>
+<p class="font-inter text-sm leading-relaxed text-slate-500 max-w-xs">
+                    Reimagining productivity through acoustic spatial design. ZenCubix Acoustic Labs is dedicated to building the future of deep work.
+                </p>
+<p class="font-inter text-sm leading-relaxed text-slate-500">Copyright 2024 ZenCubix Acoustic Labs. All rights reserved.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-bold text-sm uppercase tracking-wider text-slate-900">Product</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors text-sm" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-sm uppercase tracking-wider text-slate-900">Support</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors text-sm" href="#">Contact Us</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors text-sm" href="#">Support</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
